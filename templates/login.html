@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+  </head>
+  <body>
+    <nav>
+      <a href="/login">
+        Login
+      </a>
+      <a href="/register">
+        Register
+      </a>
+    </nav>
+    <h1>
+      Login
+    </h1>
+    <form
+      action="{{ url_for('login') }}"
+      method="POST"
+    >
+      <input
+        name="email"
+        type="email"
+        placeholder="Email"
+        aria-label="Email"
+        required
+      >
+      <input
+        name="password"
+        type="password"
+        placeholder="Password"
+        aria-label="Password"
+        required
+      >
+      <button>
+        Let's go
+      </button>
+    </form>
+  </body>
+</html>
